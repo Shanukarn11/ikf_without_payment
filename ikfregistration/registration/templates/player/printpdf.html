@@ -80,9 +80,9 @@ h3 {
        {% comment %} <div class="aadhar_details">
         <h3><span id="document_id_selected_id">DOCUMENT TYPE</span> <b>:</b></h3><h3 id="document_id_number">DOCUMENT ID</h3>
       </div> {% endcomment %}
-      <div class="aadhar_details" style="text-align: start;">
-        <h3>Regional Execution Partner ( REP) <b>:</b> <span style="font-weight: 600;" id="partner_name">REP NAME</span></h3>
-      </div>
+      <!-- <div class="aadhar_details" style="text-align: start;">
+        <h3>Regional Execution Partner ( REP) <b>:</b> <span style="font-weight: 600;" id="partner_name">NA</span></h3>
+      </div> -->
       <div class="card_header" >
         <img class="player_id_barcode" alt="BARCODE" style="width:fit-content;height:fit-content; margin-top: 0px;"></img>
        </div>
@@ -206,18 +206,18 @@ else{
       document.getElementsByClassName('pic_file')[0].src=result['pic_file'];
       document.getElementsByClassName('player_id_barcode')[0].src=result['player_id_barcode'];
 
-      $.ajax({
-  type: "POST",
-    url:"{% url 'partnerinfo' %}",
-    data:{season:result['season_id'], city:result['tournament_city_id'], category:result['category_id'],
-    csrfmiddlewaretoken:'{{ csrf_token }}'},
-    success:function(partnerinfo){
-      console.log('this is partnerinfo',partnerinfo);
-      document.getElementById('partner_name').innerHTML=partnerinfo['partner_name'];
-    },
-    error:function(error){}
+//       $.ajax({
+//   type: "POST",
+//     url:"{% url 'partnerinfo' %}",
+//     data:{season:result['season_id'], city:result['tournament_city_id'], category:result['category_id'],
+//     csrfmiddlewaretoken:'{{ csrf_token }}'},
+//     success:function(partnerinfo){
+//       console.log('this is partnerinfo',partnerinfo);
+//       document.getElementById('partner_name').innerHTML=partnerinfo['partner_name'];
+//     },
+//     error:function(error){}
 
-})
+// })
     },
     error:function(error){'error is here',console.error(error);},
   })
