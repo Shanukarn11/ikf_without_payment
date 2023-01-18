@@ -87,19 +87,20 @@
     <form method="post" name="form1" id="form1" class="glass-morphism-container1">
       {% csrf_token %}
       <div class="heading">
-        <div class="title" style="font-size: 2.5vw; margin-bottom: 1em">
+        <div class="title" style="font-size: 3.2vw; margin-bottom: 0.5em">
           {{chandrapur_heading_ikf_registration_for}}
           
         </div>
-        <div class="title" style="font-size: 3.5vw">{{chandrapur_heading_homepage}}</div>
+        <div class="title" style="font-size: 2.7vw; margin-bottom: 1.1em">{{chandrapur_heading_homepage}}</div>
+        <div class="title" style="font-size: 1.7vw">{{only_for_chandrapur}}</div>
         <div style="display: flex; flex-direction: column; margin-top: 2em;max-width: 80%;width: 300px;">
-          <!-- <button
+          <button
             class="join-button"
             onclick="nextprev(event,'next')"
             type="submit"
           >
             {{register_button}}
-          </button> -->
+          </button>
         <div style="display: flex; flex-direction: row; margin-top: 2em;">
           <!-- <button
           class="login-button"
@@ -140,18 +141,7 @@
         </ul>
       </ul>
 
-      <ul>
-        <li>
-          <u><b>{{index_age_criteria_for_girls}}</b></u>
-        </li>
-        <ul style="padding-left: 2em">
-         
-          <li>{{index_u17_girl_text}}</li>
 
-
-       
-        </ul>
-      </ul>
 
 
 
@@ -160,16 +150,25 @@
 
       
       <p>
-        <b style="color: wheat; font-size: 1rem">{{index_how_to_join_us}}</b><br />
+        <b style="color: wheat; font-size: 1rem">{{how_to_register}}</b><br />
         <ol>
-          <li>{{index_step1}}</li>
-          <li>{{index_step2}}</li>
-          <li>{{index_step3}}</li>
+          <li>{{how_to_register_step1}}</li>
+          <li>{{how_to_register_step2}}</li>
+          
         </ol>
-       
-
+       <br>
+        <b style="color: wheat; font-size: 1rem">{{Player_Journey_in_IKF_Season}}</b><br />
+        <ol>
+          <li>{{journey_step1}}</li>
+          <li>{{journey_step2}}</li>
+          <li>{{journey_step3}}</li>
+          <li>{{journey_step4}}</li>
+          <li>{{journey_step5}}</li>
+          <li>{{journey_step6}}</li>
+          
+        </ol>
         <br />
-        <span style="color:rgb(255, 183, 0);">{{important_mention}}</span>
+        <span style="color:rgb(255, 183, 0);">{{chandrapur_important_mention}}</span>
       </p>
     </div>
     </form>

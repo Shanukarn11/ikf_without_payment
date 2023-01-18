@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-z8!u3slu3@m85pgt&psm!ja65#f5s(!z5e$6a%)cl8*4rxtnap'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["chandrapur.indiakhelofootball.com","localhost"]
+ALLOWED_HOSTS = ["chandrapur.indiakhelofootball.com"]
 
 
 
