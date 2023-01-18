@@ -158,7 +158,7 @@ function makepass(){
   $.ajax({
     type: "POST",
     url:"{% url 'playerdata' %}",
-    data:{ikfuniqueid:ikfuniqueid, playeruploadid:playeruploadid,
+    data:{ikfuniqueid:ikfuniqueid, 
     csrfmiddlewaretoken:'{{ csrf_token }}'},
     success:function(result){
       result['name']=result['first_name']+" "+result['last_name'];

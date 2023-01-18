@@ -779,9 +779,9 @@ def mygroup(request):
 
 def playerdata(request):
     if request.method == 'POST':
-        playerid = request.POST.get('playeruploadid')
+        
         ikfid = request.POST.get('ikfuniqueid')
-        playerdata = list(Player.objects.filter(playeruploadid=playerid,ikfuniqueid=ikfid).values())
+        playerdata = list(Player.objects.filter(ikfuniqueid=ikfid).values())
         print(playerdata)
         generatebarcode(playerdata[0])
     return JsonResponse(playerdata[0], safe=False)
