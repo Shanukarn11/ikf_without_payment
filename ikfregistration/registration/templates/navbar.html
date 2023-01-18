@@ -93,39 +93,38 @@
         </div>
         <div class="title" style="font-size: 3.5vw">{{heading_homepage}}</div>
         <div style="display: flex; flex-direction: column; margin-top: 2em;max-width: 80%;width: 300px;">
-          <!--<button
+          <button
             class="join-button"
             onclick="nextprev(event,'next')"
             type="submit"
           >
-           
-	  </button> --!> 
-		  
-     <!--   <div style="display: flex; flex-direction: row; margin-top: 2em;">
-           <button
+            {{register_button}}
+          </button>
+        <div style="display: flex; flex-direction: row; margin-top: 2em;">
+          <button
           class="login-button"
           onclick="login('login')"
-          style="margin-left: 0px;width: 50%;"
+          style="margin-left: 0px;width: 100%;"
         >
-          Player Login
+          {{login_button}}
         </button>
-        <button
+        {% comment %} <button
         class="login-button"
         style="width: 50%;"
         onclick="login('coachlogin')"
      
       >
         Coach Login
-      </button> 
-      </div> --!>
+      </button> {% endcomment %}
+        </div>
         </div>
       </div>
     <br>
     <!-- NoticeBoard area -->
-<!--<div class="mt-5">
-      <ul>
+    <div class="mt-5">
+      <!-- <ul>
         <li>{{index_registration_fees_desc}} <b>{{index_registration_fees}}</b></li>
-      </ul>
+      </ul> -->
      
       <ul>
         <li>
@@ -172,7 +171,7 @@
         <br />
         <span style="color:rgb(255, 183, 0);">{{important_mention}}</span>
       </p>
-      </div> --!>
+    </div>
     </form>
 
 

@@ -94,7 +94,7 @@
         
         </button>
       
-        <button class="btn login-btn mt-2" onclick="proceed_to_payment(this)"  id="proceed" disabled >Proceed to Payment</button>
+       
       </div>
     </div>
 
@@ -152,7 +152,7 @@ window.onload = function() {
     if(sessionStorage.getItem('saved')=='true'){
       document.getElementById("prev").disabled=true
       document.getElementById("next").disabled=true
-      document.getElementById("proceed").disabled=false
+     
     }
 
   }
@@ -305,7 +305,7 @@ if(sessionStorage.getItem("data")){
   }
 
   else if(PREVIEW_TYPE=="preview1"){
-  document.getElementById("proceed").hidden=true;
+  
 
   }
   
@@ -416,12 +416,13 @@ $.ajax({type: "POST",
             
             
             try{
-              alert('Player Data Submitted Successfully. Now click to "Proceed to Payment" button to go to Payment page.');
+              alert('Player Data Submitted Successfully. Now download the Player Pass.');
+              window.location.href = "{% url 'printpdf' %}";
 
 
               document.getElementById("prev").disabled=true
             document.getElementById("next").disabled=true
-            document.getElementById("proceed").disabled=false
+           
             sessionStorage.setItem("saved","true")
            
             
