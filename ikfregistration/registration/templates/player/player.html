@@ -269,7 +269,7 @@ else{
 $.ajax({
     type: "POST",
     url: "{% url 'limitdate' %}",
-    data:{season:"S02",csrfmiddlewaretoken:'{{ csrf_token }}'},
+    data:{season:"S03",csrfmiddlewaretoken:'{{ csrf_token }}'},
     success: function(result){
      console.log(result);
      dobid.max=result["upperlimit"];

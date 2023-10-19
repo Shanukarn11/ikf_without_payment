@@ -467,7 +467,7 @@ async function datelimit() {
   await $.ajax({
     type: "POST",
     url: "limitdate",
-    data: { season: "S02", csrfmiddlewaretoken: csrftoken },
+    data: { season: "S03", csrfmiddlewaretoken: csrftoken },
     success: function (result) {
       date_picker.max = result["upperlimit"];
       date_picker.min = result["lowerlimit"];

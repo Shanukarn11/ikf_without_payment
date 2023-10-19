@@ -201,12 +201,12 @@ def coachplayer(request):
                 secondary_position=MasterPosition.objects.get(id=playerdata['Secondary Position']),
                 mobile=playerdata['Phone No.'],
                 group=datagroup[0],
-                season=MasterSeason.objects.get(id="S02"),
+                season=MasterSeason.objects.get(id="S03"),
                 category=MasterCategory.objects.get(id="C"),
             )
             playermodel.save()
             id=playermodel.id
-            playermodel.ikfuniqueid="IKF-S02"+coach_data["tournament_state"].name[:3].upper()+coach_data['tournament_city'].city[:3].upper()+f"{id:04d}"
+            playermodel.ikfuniqueid="IKF-S03"+coach_data["tournament_state"].name[:3].upper()+coach_data['tournament_city'].city[:3].upper()+f"{id:04d}"
 
             player_image_url='media/images/'+playermodel.ikfuniqueid+'.png'
             base64ToImage(playerdata['player_image'],player_image_url)
